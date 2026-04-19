@@ -21,6 +21,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: global.json
+
       - name: NBGV
         id: nbgv
         uses: dotnet/nbgv@master
@@ -28,11 +33,6 @@ jobs:
           setAllVars: true
 
       - run: echo 'SemVer2=${{ steps.nbgv.outputs.SemVer2 }}'
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
 
       - name: Restore
         run: dotnet restore ReactiveMcpServer.slnx
@@ -76,6 +76,11 @@ jobs:
           name: nuget-packages
           path: src/artifacts
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: global.json
+
       - name: NBGV
         id: nbgv
         uses: dotnet/nbgv@master
@@ -83,11 +88,6 @@ jobs:
           setAllVars: true
 
       - run: echo 'SemVer2=${{ steps.nbgv.outputs.SemVer2 }}'
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
 
       - name: Install GitReleaseNoteGenerator
         run: dotnet tool install -g GitReleaseNoteGenerator
