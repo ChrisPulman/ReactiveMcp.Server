@@ -1,0 +1,60 @@
+{
+  "id": "rx-operators",
+  "displayName": "Observable Operators",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "rx",
+  "summary": "Guidance for transforming, filtering, combining, buffering, and timing observable sequences with composable operators.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Desktop Apps",
+    "Web Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "System.Reactive"
+  ],
+  "recommendedPatterns": [
+    "Prefer operator composition over nested Subscribe trees.",
+    "Use timing and combination operators to encode behavior instead of hand-written coordination flags.",
+    "Keep pipelines small, named, and observable in tests."
+  ],
+  "avoidPatterns": [
+    "Do not reimplement merge, zip, combine, debounce, or buffer behavior imperatively unless necessary.",
+    "Do not bury operator chains inside anonymous callbacks that cannot be inspected or tested."
+  ],
+  "setupSteps": [
+    "Model the source sequence clearly first.",
+    "Apply transformation, filtering, and combination operators in readable stages.",
+    "Cover timing-sensitive operators with TestScheduler-based tests."
+  ],
+  "commonPitfalls": [
+    "Using the wrong hot/cold assumption when composing operators.",
+    "Testing throttle or delay behavior with real time instead of virtual time."
+  ],
+  "relatedLibraries": [
+    "rx-dotnet-core",
+    "rx-testing",
+    "rx-schedulers"
+  ],
+  "keywords": [
+    "merge",
+    "zip",
+    "buffer",
+    "combineLatest",
+    "throttle",
+    "operators"
+  ],
+  "sources": [
+    {
+      "title": "Observable Operators (Embedded Offline Catalog)",
+      "url": "embedded://catalog/rx-operators",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

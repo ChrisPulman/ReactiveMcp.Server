@@ -1,0 +1,60 @@
+{
+  "id": "rx-performance",
+  "displayName": "Rx Performance Benchmarks",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "performance",
+  "summary": "BenchmarkDotNet-driven performance guidance for operators, subjects, schedulers, and allocation-sensitive reactive pipelines.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Desktop Apps",
+    "Web Apps",
+    "Benchmarks"
+  ],
+  "nugetPackages": [
+    "System.Reactive",
+    "BenchmarkDotNet"
+  ],
+  "recommendedPatterns": [
+    "Measure operator and subject choices in realistic workloads before optimizing.",
+    "Use benchmark suites to catch regressions in throughput and allocations.",
+    "Treat replay, buffering, and multicasting choices as performance-affecting decisions."
+  ],
+  "avoidPatterns": [
+    "Do not assume two operators or subject types have identical cost profiles.",
+    "Do not optimize reactive pipelines without representative benchmarks."
+  ],
+  "setupSteps": [
+    "Create focused BenchmarkDotNet suites around the operators or subjects under scrutiny.",
+    "Benchmark at multiple observer counts and event counts.",
+    "Track allocations and throughput together."
+  ],
+  "commonPitfalls": [
+    "Choosing ReplaySubject<T> without understanding replay retention cost.",
+    "Ignoring the effect of observer count on subject overhead."
+  ],
+  "relatedLibraries": [
+    "rx-subjects",
+    "rx-operators",
+    "rx-schedulers"
+  ],
+  "keywords": [
+    "benchmark",
+    "benchmarkdotnet",
+    "performance",
+    "allocation",
+    "throughput"
+  ],
+  "sources": [
+    {
+      "title": "Performance Benchmarks (Embedded Offline Catalog)",
+      "url": "embedded://catalog/rx-performance",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

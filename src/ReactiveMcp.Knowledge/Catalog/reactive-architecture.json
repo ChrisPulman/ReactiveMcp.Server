@@ -1,0 +1,62 @@
+{
+  "id": "reactive-architecture",
+  "displayName": "Reactive .NET Architecture",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "architecture",
+  "summary": "High-level architecture across Rx.NET, Ix.NET, System.Linq.Async, and AsyncRx with explicit push-vs-pull trade-offs.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Desktop Apps",
+    "Web Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "System.Reactive",
+    "System.Linq.Async"
+  ],
+  "recommendedPatterns": [
+    "Choose IObservable<T> for push-based event streams and fan-out delivery.",
+    "Choose IEnumerable<T> or IAsyncEnumerable<T> when consumers should pull values on demand.",
+    "Document hot/cold, push/pull, and completion semantics at API boundaries."
+  ],
+  "avoidPatterns": [
+    "Do not mix push and pull abstractions without a deliberate boundary.",
+    "Do not assume event-based code and reactive pipelines have identical lifetime semantics."
+  ],
+  "setupSteps": [
+    "Identify whether the producer should push or the consumer should pull.",
+    "Pick the sequence abstraction before choosing operators or subjects.",
+    "Keep abstraction conversion seams explicit and testable."
+  ],
+  "commonPitfalls": [
+    "Treating IAsyncEnumerable<T> as a drop-in replacement for broadcast event delivery.",
+    "Failing to describe completion semantics for long-lived reactive streams."
+  ],
+  "relatedLibraries": [
+    "rx-dotnet-core",
+    "ix-dotnet",
+    "system-linq-async",
+    "asyncrx-dotnet"
+  ],
+  "keywords": [
+    "architecture",
+    "push",
+    "pull",
+    "observable",
+    "async enumerable",
+    "interactive"
+  ],
+  "sources": [
+    {
+      "title": "Architecture (Embedded Offline Catalog)",
+      "url": "embedded://catalog/reactive-architecture",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

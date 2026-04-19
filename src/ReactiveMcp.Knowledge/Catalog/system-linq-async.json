@@ -1,0 +1,63 @@
+{
+  "id": "system-linq-async",
+  "displayName": "System.Linq.Async",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "async",
+  "summary": "LINQ operators for IAsyncEnumerable<T> when asynchronous pull-based streaming is the right abstraction.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Console Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "System.Linq.Async"
+  ],
+  "recommendedPatterns": [
+    "Use IAsyncEnumerable<T> when consumers should pull async results incrementally.",
+    "Apply LINQ operators from System.Linq.Async instead of manual async iterator loops when clarity improves.",
+    "Keep push-vs-pull decisions explicit at public API boundaries."
+  ],
+  "avoidPatterns": [
+    "Do not replace broadcast live streams with IAsyncEnumerable<T> unless pull semantics are acceptable.",
+    "Do not bury cancellation and enumeration ownership."
+  ],
+  "setupSteps": [
+    "Reference System.Linq.Async.",
+    "Model backpressure and cancellation expectations explicitly.",
+    "Test enumeration order and cancellation behavior."
+  ],
+  "commonPitfalls": [
+    "Using IAsyncEnumerable<T> for event fan-out scenarios that need multiple live observers.",
+    "Mixing pull and push pipelines without documenting the transition."
+  ],
+  "relatedLibraries": [
+    "ix-dotnet",
+    "reactive-architecture",
+    "rx-dotnet-core"
+  ],
+  "keywords": [
+    "system.linq.async",
+    "iasyncenumerable",
+    "async enumerable",
+    "pull",
+    "linq"
+  ],
+  "sources": [
+    {
+      "title": "IAsyncEnumerable Core (Embedded Offline Catalog)",
+      "url": "embedded://catalog/system-linq-async",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    },
+    {
+      "title": "LINQ Operators for IAsyncEnumerable (Embedded Offline Catalog)",
+      "url": "embedded://catalog/system-linq-async",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

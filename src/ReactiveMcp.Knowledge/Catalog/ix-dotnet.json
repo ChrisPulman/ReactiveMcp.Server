@@ -1,0 +1,59 @@
+{
+  "id": "ix-dotnet",
+  "displayName": "Ix.NET",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "async",
+  "summary": "Interactive Extensions for IEnumerable<T> and IAsyncEnumerable<T> scenarios where consumers pull data and LINQ-style sequence operators are needed.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Console Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "System.Interactive",
+    "System.Interactive.Async"
+  ],
+  "recommendedPatterns": [
+    "Use Ix when you need richer LINQ operators over IEnumerable<T> or IAsyncEnumerable<T>.",
+    "Keep pull-based sequence processing explicit when consumers drive enumeration.",
+    "Use Ix to avoid hand-rolling sequence operators for pull-based workflows."
+  ],
+  "avoidPatterns": [
+    "Do not force IObservable<T> into pull-oriented APIs when enumeration is the natural model.",
+    "Do not conflate async iteration with multicast event delivery."
+  ],
+  "setupSteps": [
+    "Choose Ix when the consumer should control enumeration.",
+    "Reference System.Interactive or System.Interactive.Async as appropriate.",
+    "Test pull semantics and cancellation behavior explicitly."
+  ],
+  "commonPitfalls": [
+    "Using pull-based abstractions for hot fan-out event streams.",
+    "Forgetting that async iteration still differs from reactive push delivery."
+  ],
+  "relatedLibraries": [
+    "system-linq-async",
+    "reactive-architecture",
+    "asyncrx-dotnet"
+  ],
+  "keywords": [
+    "ix",
+    "interactive",
+    "ienumerable",
+    "async enumerable",
+    "pull"
+  ],
+  "sources": [
+    {
+      "title": "Ix.NET (Embedded Offline Catalog)",
+      "url": "embedded://catalog/ix-dotnet",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

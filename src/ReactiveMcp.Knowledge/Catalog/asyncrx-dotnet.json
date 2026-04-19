@@ -1,0 +1,57 @@
+{
+  "id": "asyncrx-dotnet",
+  "displayName": "AsyncRx.NET",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "async",
+  "summary": "Experimental async-observer and async-observable support for scenarios that need deeper async/await semantics than classic Rx.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Research",
+    "Prototypes"
+  ],
+  "nugetPackages": [
+    "System.Reactive.Async"
+  ],
+  "recommendedPatterns": [
+    "Use AsyncRx only when asynchronous observer semantics are required, not by default.",
+    "Keep the distinction between IAsyncObservable<T> and IObservable<T> explicit.",
+    "Evaluate whether classic Rx or IAsyncEnumerable<T> already solves the problem before introducing AsyncRx."
+  ],
+  "avoidPatterns": [
+    "Do not adopt AsyncRx just because a pipeline contains async methods.",
+    "Do not blur experimental async-reactive abstractions with mainstream Rx without a clear reason."
+  ],
+  "setupSteps": [
+    "Confirm that async observer semantics are truly needed.",
+    "Reference System.Reactive.Async only for targeted scenarios.",
+    "Document why classic Rx or IAsyncEnumerable<T> was insufficient."
+  ],
+  "commonPitfalls": [
+    "Adding AsyncRx where normal async composition around Rx would be simpler.",
+    "Failing to explain why async observers are part of the design."
+  ],
+  "relatedLibraries": [
+    "rx-dotnet-core",
+    "system-linq-async",
+    "reactive-architecture"
+  ],
+  "keywords": [
+    "asyncrx",
+    "iasyncobservable",
+    "iasyncobserver",
+    "async reactive"
+  ],
+  "sources": [
+    {
+      "title": "AsyncRx.NET (Embedded Offline Catalog)",
+      "url": "embedded://catalog/asyncrx-dotnet",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

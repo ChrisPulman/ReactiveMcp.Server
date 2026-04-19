@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.chrispulman/reactive-mcp-server",
+  "title": "Reactive MCP Server",
+  "description": "Reactive .NET architecture, debugging, modernization, and testing guidance MCP server curated from dotnet/reactive DeepWiki.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "nuget",
+      "registryBaseUrl": "https://api.nuget.org/v3/index.json",
+      "identifier": "CP.Reactive.Mcp.Server",
+      "version": "0.1.0",
+      "runtimeHint": "dnx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DOTNET_SKIP_FIRST_TIME_EXPERIENCE",
+          "value": "1",
+          "description": "Skip .NET CLI first-time setup experience"
+        },
+        {
+          "name": "DOTNET_NOLOGO",
+          "value": "1",
+          "description": "Suppress .NET logo and startup messages"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/ChrisPulman/ReactiveMcp.Server",
+    "source": "github"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "rx-dotnet-core",
+  "displayName": "Rx.NET Core",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "rx",
+  "summary": "Core Rx.NET abstractions: IObservable<T>, IObserver<T>, observable factories, operators, schedulers, subjects, and .NET integration points.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Desktop Apps",
+    "Web Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "System.Reactive"
+  ],
+  "recommendedPatterns": [
+    "Compose asynchronous and event-based logic with IObservable<T> and operators rather than ad hoc callbacks.",
+    "Keep observable pipelines declarative and isolate side effects near subscription boundaries.",
+    "Use operators, schedulers, and disposal together as one design unit."
+  ],
+  "avoidPatterns": [
+    "Do not scatter Subscribe calls throughout business logic without ownership.",
+    "Do not hide terminal behavior and errors from downstream consumers."
+  ],
+  "setupSteps": [
+    "Reference System.Reactive.",
+    "Define source observables and subscription ownership early.",
+    "Choose scheduler boundaries intentionally."
+  ],
+  "commonPitfalls": [
+    "Ignoring OnError and disposal behavior.",
+    "Treating every event callback as a separate special case instead of composing operators."
+  ],
+  "relatedLibraries": [
+    "rx-operators",
+    "rx-schedulers",
+    "rx-subjects",
+    "rx-testing"
+  ],
+  "keywords": [
+    "iobservable",
+    "iobserver",
+    "subscribe",
+    "operators",
+    "schedulers"
+  ],
+  "sources": [
+    {
+      "title": "Rx.NET (Embedded Offline Catalog)",
+      "url": "embedded://catalog/rx-dotnet-core",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

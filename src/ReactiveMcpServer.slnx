@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ReactiveMcp.Core/ReactiveMcp.Core.csproj" />
+  <Project Path="ReactiveMcp.Knowledge/ReactiveMcp.Knowledge.csproj" />
+  <Project Path="ReactiveMcp.Server/ReactiveMcp.Server.csproj" />
+  <Project Path="ReactiveMcp.Tests/ReactiveMcp.Tests.csproj" />
+</Solution>

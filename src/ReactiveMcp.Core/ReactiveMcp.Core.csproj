@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>CP.ReactiveMcp.Core</AssemblyName>
+    <RootNamespace>ReactiveMcp.Core</RootNamespace>
+    <PackageId>CP.Reactive.Mcp.Core</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="" Link="README.md" />
+  </ItemGroup>
+</Project>

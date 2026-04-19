@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>CP.ReactiveMcp.Knowledge</AssemblyName>
+    <RootNamespace>ReactiveMcp.Knowledge</RootNamespace>
+    <PackageId>CP.Reactive.Mcp.Knowledge</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReactiveMcp.Core\ReactiveMcp.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Catalog\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="" Link="README.md" />
+  </ItemGroup>
+</Project>

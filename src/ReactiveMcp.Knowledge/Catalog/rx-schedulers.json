@@ -1,0 +1,64 @@
+{
+  "id": "rx-schedulers",
+  "displayName": "Rx Schedulers",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "scheduling",
+  "summary": "Execution-context and concurrency guidance for reactive pipelines, including scheduler selection, time control, and observer-thread behavior.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Desktop Apps",
+    "Web Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "System.Reactive"
+  ],
+  "recommendedPatterns": [
+    "Make SubscribeOn and ObserveOn choices explicit when thread or context matters.",
+    "Treat timing operators and scheduler choices as one contract.",
+    "Use test schedulers to validate scheduler-sensitive behavior."
+  ],
+  "avoidPatterns": [
+    "Do not rely on implicit scheduler defaults when thread-affinity matters.",
+    "Do not assume production and observation happen on the same context."
+  ],
+  "setupSteps": [
+    "Identify where work is produced and where it is observed.",
+    "Select the correct scheduler for timers, coordination, and UI or request-thread boundaries.",
+    "Mirror those choices in tests."
+  ],
+  "commonPitfalls": [
+    "Race conditions caused by hidden scheduler transitions.",
+    "UI-thread bugs caused by missing observation context switches."
+  ],
+  "relatedLibraries": [
+    "rx-dotnet-core",
+    "rx-testing",
+    "rx-performance"
+  ],
+  "keywords": [
+    "scheduler",
+    "observeon",
+    "subscribeon",
+    "concurrency",
+    "timing"
+  ],
+  "sources": [
+    {
+      "title": "Rx.NET (Embedded Offline Catalog)",
+      "url": "embedded://catalog/rx-schedulers",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    },
+    {
+      "title": "Testing Rx Code (Embedded Offline Catalog)",
+      "url": "embedded://catalog/rx-schedulers",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "rx-testing",
+  "displayName": "Rx Testing",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "testing",
+  "summary": "Deterministic testing with TestScheduler, virtual time, recorded notifications, and controlled subscription windows.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Desktop Apps",
+    "Web Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "Microsoft.Reactive.Testing"
+  ],
+  "recommendedPatterns": [
+    "Use TestScheduler to control time-dependent operators such as debounce, delay, retry, and timeout.",
+    "Assert recorded notifications and subscription windows explicitly.",
+    "Prefer deterministic virtual time to wall-clock sleeps in tests."
+  ],
+  "avoidPatterns": [
+    "Do not test reactive timing with Thread.Sleep or Task.Delay.",
+    "Do not rely on ambient timers when virtual time can make the behavior deterministic."
+  ],
+  "setupSteps": [
+    "Reference Microsoft.Reactive.Testing.",
+    "Create a TestScheduler and test observer.",
+    "Advance virtual time and assert recorded messages."
+  ],
+  "commonPitfalls": [
+    "Forgetting to control the scheduler for the operator under test.",
+    "Asserting only values while ignoring completion or error notifications."
+  ],
+  "relatedLibraries": [
+    "rx-dotnet-core",
+    "rx-operators",
+    "rx-schedulers"
+  ],
+  "keywords": [
+    "testscheduler",
+    "virtual time",
+    "reactiveassert",
+    "recorded",
+    "testing"
+  ],
+  "sources": [
+    {
+      "title": "Testing Rx Code (Embedded Offline Catalog)",
+      "url": "embedded://catalog/rx-testing",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}

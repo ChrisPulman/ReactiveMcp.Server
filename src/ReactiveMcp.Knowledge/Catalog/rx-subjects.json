@@ -1,0 +1,59 @@
+{
+  "id": "rx-subjects",
+  "displayName": "Rx Subjects",
+  "repositoryUrl": "https://github.com/dotnet/reactive",
+  "category": "rx",
+  "summary": "Subject<T>, BehaviorSubject<T>, ReplaySubject<T>, and AsyncSubject<T> behavior, trade-offs, and boundary-oriented usage guidance.",
+  "supportedTargets": [
+    "Libraries",
+    "Services",
+    "Desktop Apps",
+    "Web Apps",
+    "Tests"
+  ],
+  "nugetPackages": [
+    "System.Reactive"
+  ],
+  "recommendedPatterns": [
+    "Use Subject<T> only when bridging external callbacks or deliberate multicasting is required.",
+    "Choose the subject type based on replay and completion semantics, not convenience.",
+    "Audit every subject for ownership, terminal behavior, and subscriber expectations."
+  ],
+  "avoidPatterns": [
+    "Do not use subjects as a default mutable state store.",
+    "Do not choose ReplaySubject<T> casually when memory retention matters."
+  ],
+  "setupSteps": [
+    "Confirm whether a subject is necessary at all.",
+    "Pick Subject<T>, BehaviorSubject<T>, ReplaySubject<T>, or AsyncSubject<T> based on actual replay semantics.",
+    "Dispose subjects consistently with the owning component."
+  ],
+  "commonPitfalls": [
+    "Unexpected replay or completion behavior for late subscribers.",
+    "Accidental retention growth with ReplaySubject<T>."
+  ],
+  "relatedLibraries": [
+    "rx-dotnet-core",
+    "rx-testing",
+    "rx-performance"
+  ],
+  "keywords": [
+    "subject",
+    "behaviorsubject",
+    "replaysubject",
+    "asyncsubject",
+    "multicast"
+  ],
+  "sources": [
+    {
+      "title": "Subjects (Embedded Offline Catalog)",
+      "url": "embedded://catalog/rx-subjects",
+      "notes": "Embedded offline summary curated into the Reactive MCP Server knowledge catalog."
+    }
+  ],
+  "harvest": {
+    "harvestedAtUtc": "2026-04-19T14:55:00Z",
+    "sourceSummary": "Curated into an embedded offline catalog for Reactive MCP Server from prior research and normalized for local-only runtime use.",
+    "notes": "This catalog entry is intended to support fully offline MCP usage."
+  }
+}
