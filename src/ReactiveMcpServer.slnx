@@ -1,4 +1,16 @@
 <Solution>
+  <Folder Name="/Config/">
+    <File Path="../.gitignore" />
+    <File Path="../Directory.Build.props" />
+    <File Path="../Directory.Packages.props" />
+    <File Path="../global.json" />
+    <File Path="../implementation-plan-line-diagnostics.md" />
+    <File Path="../implementation-plan-offline-review-hardening.md" />
+    <File Path="../LICENSE" />
+    <File Path="../README.md" />
+    <File Path="../testconfig.json" />
+    <File Path="../version.json" />
+  </Folder>
   <Project Path="ReactiveMcp.Core/ReactiveMcp.Core.csproj" />
   <Project Path="ReactiveMcp.Knowledge/ReactiveMcp.Knowledge.csproj" />
   <Project Path="ReactiveMcp.Server/ReactiveMcp.Server.csproj" />
